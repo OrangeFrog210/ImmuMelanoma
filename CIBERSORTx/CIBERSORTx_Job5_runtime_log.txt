@@ -1,0 +1,14 @@
+>Running CIBERSORTxFractions...
+>[Options] mixture: files/common/mixture_melanoma_VanAllen.txt
+>[Options] sigmatrix: files/edwin.wang@ucalgary.ca/im_m_rnaseq_fb.txt
+>[Options] perm: 1
+>[Options] verbose: TRUE
+>[Options] QN: FALSE
+>[Options] outdir: files/edwin.wang@ucalgary.ca/results/
+>[Options] label: Job5
+>=============CIBERSORTx Settings===============
+>Mixture file: files/common/mixture_melanoma_VanAllen.txt 
+>Signature matrix file: files/edwin.wang@ucalgary.ca/im_m_rnaseq_fb.txt 
+>Number of permutations set to: 1 
+>Enable verbose output
+>==================CIBERSORTx===================
