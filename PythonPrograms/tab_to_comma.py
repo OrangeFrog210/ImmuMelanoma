@@ -1,5 +1,5 @@
 """
-replaces any period in a file to hyphen ('.' to '-')
+replaces any tab in a file to comma ('\t' to ',')
 
 LM: July 23rd, 2019.
 """
@@ -14,10 +14,10 @@ for file in glob.glob(dir_condition):
     list_csvnames.append(file)
 
 for file in list_csvnames:
-    fOut = file.split('.')[0] + '_tab.csv'
+    fOut = file.split('.')[0] + '_comma.csv'
     with open(file, 'r') as fin:
         with open(fOut, 'w') as fw:
             for line1 in fin:
                 line1 = line1.strip()
-                line = line1.replace(',', '\t')
+                line = line1.replace('\t', ',')
                 fw.writelines(line + "\n")
