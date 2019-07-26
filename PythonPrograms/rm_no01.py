@@ -8,7 +8,7 @@ import os
 import glob
 
 
-path = "/home/yshiba/immu_melanoma/matched/rest/"
+path = "/home/yshiba/Redo_activated/act_01/"
 condition = "*.csv"
 dir_condition = os.path.join(path, condition)
 list_csvnames = []
@@ -18,12 +18,10 @@ for file in glob.glob(dir_condition):
 print(len(list_csvnames))
 
 for f in list_csvnames:
-    geneName = f.split('.')[0].split('_')[11]
-    print(geneName)
     fOut = f.split('.')[0] + "_labeled.csv"
 
     with open(fOut, 'w') as fw:
-        fw.writelines("official_gene_symbol,geneExp,fxm01\n")
+        fw.writelines("official_gene_symbol,geneExp,logGeneExp,fxm01\n")
         with open(f, 'r') as fin:
             for line in fin:
                 line = line.strip()

@@ -9,8 +9,8 @@ import pandas as pd
 from scipy import stats
 import matplotlib.pyplot as plt
 
-fOut = "/home/yshiba/immu_melanoma/log/im_m_rnaseq_fb_NK_62_normdist_3.txt"
-path = "/home/yshiba/immu_melanoma/log/"
+fOut = "/home/yshiba/immu_melanoma/im_m_rnaseq_fb_NK_62_normdist_act.txt"
+path = "/home/yshiba/Redo_activated/tab/"
 condition = "*.csv"
 dir_condition = os.path.join(path, condition)
 list_csvnames = []
@@ -20,7 +20,7 @@ for file in glob.glob(dir_condition):
 with open(fOut, 'w') as fw:
     fw.writelines("geneName,fxmut,pValue" + '\n')
     for file in list_csvnames:
-        geneName = file.split('_')[8]
+        geneName = file.split('_')[9]
         fxnmut_state = file.split('_')[7]
         #label = geneName + '_' + fxnmut_state
 

@@ -7,7 +7,7 @@ import os
 import glob
 import pandas as pd
 
-path = "/home/yshiba/immu_melanoma/wn/"
+path = "/home/yshiba/Redo_activated/"
 condition = "*.csv"
 dir_condition = os.path.join(path, condition)
 list_csvnames = []

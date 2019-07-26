@@ -2,7 +2,7 @@
 Matches the gene expression data with functional mutation status
 (functionally mutated: 1, or wild type: 0)
 
-LM: July 24th, 2019.
+LM: July 25th, 2019.
 """
 import os
 import glob
@@ -20,8 +20,9 @@ print(len(list_csvnames))
 for file01 in list_csvnames:
     geneName = file01.split('.')[0].split('_')[8]
     #print(geneName)
-    file_GE = "/home/yshiba/immu_melanoma/geneExp/rest/im_m_rnaseq_fb_NKgenes_62_rest_transp_th2pc_" + geneName + ".csv"
-    fOut = "/home/yshiba/immu_melanoma/matched/rest/im_m_rnaseq_fb_NKgenes_62_rest_transp_th2pc_01_" + geneName + ".csv"
+    #file_GE = "/home/yshiba/Redo_activated/T/im_m_rnaseq_fb_NK_62_0_act_" + geneName + "_1gene_T_tabgeneName_drop_log_index_T_smpID.csv"
+    file_GE = "/home/yshiba/Redo_activated/01TGT/Col_renamed/log/im_m_rnaseq_fb_NKgenes_62_act_transp_th2pc_" + geneName + "_smpID_log.csv"
+    fOut = "/home/yshiba/Redo_activated/im_m_rnaseq_fb_NKgenes_62_act_transp_th2pc_01_" + geneName + ".csv"
     # Dictionary for 01
     with open(file01, 'r') as fin1:
         dict01 = {}

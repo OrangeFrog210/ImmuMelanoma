@@ -5,7 +5,7 @@ LM: July 23rd, 2019
 import pandas as pd
 
 fIn_01 = "/home/yshiba/immu_melanoma/skcm_cadd12tag_t_order_NKgenes-transposed.csv"
-fIn_mixture = "/home/yshiba/immu_melanoma/im_m_rnaseq_fb_NKgenes_62_rest_transp_th2pc.csv"
+fIn_mixture = "/home/yshiba/immu_melanoma/im_m_rnaseq_fb_NKgenes_62_activated_transp_th2pc.csv"
 
 
 df = pd.read_csv(fIn_01)
@@ -19,8 +19,8 @@ for col in df[1:]:
     print(col)  # contains the name of the gene
 
     with open(fIn_mixture, 'r') as finMix:
-        with open("/home/yshiba/immu_melanoma/NK/im_m_rnaseq_fb_NK_62_1_%s.csv" % col, 'w') as fmut:
-            with open("/home/yshiba/immu_melanoma/NK/im_m_rnaseq_fb_NK_62_0_%s.csv" % col, 'w') as fnotmut:
+        with open("/home/yshiba/Redo_activated/im_m_rnaseq_fb_NK_62_1_act_%s.csv" % col, 'w') as fmut:
+            with open("/home/yshiba/Redo_activated/im_m_rnaseq_fb_NK_62_0_act_%s.csv" % col, 'w') as fnotmut:
                 line1 = finMix.readline().strip()
                 fmut.writelines(line1 + '\n')
                 fnotmut.writelines(line1 + '\n')

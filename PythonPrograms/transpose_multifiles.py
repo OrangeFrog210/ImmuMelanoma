@@ -6,8 +6,8 @@ import os
 import glob
 import pandas as pd
 
-path = "/home/yshiba/immu_melanoma/NK/1gene/"
-condition = "*.csv"
+path = "/home/yshiba/Redo_activated/tab/"
+condition = "*_index.csv"
 dir_condition = os.path.join(path, condition)
 list_csvnames = []
 for file in glob.glob(dir_condition):
@@ -20,7 +20,7 @@ for file in list_csvnames:
     print(geneName)
 
     df = pd.read_csv(file)
-    df.set_index("official gene symbol", inplace=True)
+    df.set_index("sampleID", inplace=True)
     #print(df)
     df_new = df.T
     print(df_new)
